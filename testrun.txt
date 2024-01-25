@@ -1,0 +1,70 @@
+ian@ian-Latitude-E7440:~$ nano birchswindy.py
+ian@ian-Latitude-E7440:~$ python3 birchswindy.py
+points  [(Fraction(-1, 1), 0), (Fraction(0, 1), 0), (Fraction(1, 1), 0)]
+y_solutions  [-2*sqrt(30), 2*sqrt(30)]
+ian@ian-Latitude-E7440:~$ cat birchswindy.py
+from sympy import symbols, Eq, solve
+from fractions import Fraction
+
+# Define the symbols
+x, y = symbols('x y')
+
+# Define an elliptic curve, for example, y^2 = x^3 - x
+curve_equation = Eq(y**2, x**3 - x)
+
+# Function to find rational points on the elliptic curve
+def find_rational_points(curve, search_range):
+    points = []
+    for x_val in range(-search_range, search_range + 1):
+        # Substitute x in the curve equation
+        substituted_eq = curve.subs(x, x_val)
+        # Try to solve for y
+        y_solutions = solve(substituted_eq, y)
+        # Check if solutions are rational
+        for sol in y_solutions:
+            if sol.is_rational:
+                points.append((Fraction(x_val), sol))
+    print("points ",points)
+    print("y_solutions ",y_solutions)
+    return points
+
+# Search for rational points in a specified range
+rational_points = find_rational_points(curve_equation, 5)  # Searching in the range -5 to 5
+rational_points
+
+
+ian@ian-Latitude-E7440:~$ sloccount  birchswindy.py
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/birchswindy.py to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+17      top_dir         python=17
+
+
+Totals grouped by language (dominant language first):
+python:          17 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 17
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.03)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.69)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 375
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-Latitude-E7440:~$ 
+
