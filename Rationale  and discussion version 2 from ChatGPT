@@ -1,6 +1,6 @@
 Inspired by https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/
 
-Build a model of the Birch Dyerson Swinnerton conjecture using real quantities instead of algebraic symbols. integer and real numbers. describe the model in terms of basic arithmetic equations and statements, then test it. produce a computer program in full complete code that is runnable to demonstrate it.
+Build a model of the Birch Dyer Swinnerton conjecture using real quantities instead of algebraic symbols. integer and real numbers. describe the model in terms of basic arithmetic equations and statements, then test it. produce a computer program in full complete code that is runnable to demonstrate it.
 GPT
 
 The Birch and Swinnerton-Dyer conjecture is a famous and yet unsolved problem in number theory, specifically in the field of elliptic curves. The conjecture relates the number of rational points on an elliptic curve to the behavior of a certain complex function, the L-function of the curve, at a specific point. Before we move forward, it's important to understand that this conjecture is deep and complex, involving advanced mathematical concepts that are typically beyond basic arithmetic and programming.
