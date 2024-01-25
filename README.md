@@ -1,2 +1,2 @@
-# Birch-Swinnerton-Dyson-conjecture-tests-in-Python
-Birch Swinnerton-Dyson conjecture tests in Python
+# Birch-Swinnerton-Dyer-conjecture-tests-in-Python
+Birch Swinnerton-Dyer conjecture tests in Python
