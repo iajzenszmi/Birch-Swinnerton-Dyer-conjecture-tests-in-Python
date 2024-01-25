@@ -1,3 +1,5 @@
+Inspired by https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/
+
 Build a model of the Birch Dyerson Swinnerton conjecture using real quantities instead of algebraic symbols. integer and real numbers. describe the model in terms of basic arithmetic equations and statements, then test it. produce a computer program in full complete code that is runnable to demonstrate it.
 GPT
 
